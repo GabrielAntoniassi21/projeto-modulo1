@@ -1,0 +1,29 @@
+{
+  "name": "projeto-modulo1",
+  "version": "1.0.0",
+  "description": "Aplicação web SkillMatch desenvolvida para o Projeto do Módulo 1 do SCTEC.",
+  "type": "module",
+  "scripts": {
+    "dev": "live-server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GabrielAntoniassi21/projeto-modulo1.git"
+  },
+  "keywords": [
+    "html",
+    "css",
+    "javascript",
+    "skillmatch",
+    "sctec"
+  ],
+  "author": "Gabriel Antoniassi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/GabrielAntoniassi21/projeto-modulo1/issues"
+  },
+  "homepage": "https://github.com/GabrielAntoniassi21/projeto-modulo1#readme",
+  "devDependencies": {
+    "live-server": "^1.2.2"
+  }
+}
