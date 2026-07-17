@@ -14,16 +14,13 @@ class Candidato {
         return {
             compatibilidade:
                 (habilidadesComuns.length / vaga.requisitos.length) * 100,
-
             habilidadesEncontradas: habilidadesComuns,
-
             habilidadesFaltantes:
                 vaga.requisitos.filter(
                     requisito => !this.habilidades.includes(requisito)
                 )
         };
     }
-
     exibirResumo() {
         return `${this.nome} possui ${this.experienciaMeses} meses de experiência na área ${this.area}.`;
     }
@@ -48,7 +45,6 @@ class VagaFrontEndJunior extends Vaga {
 
 function criarContador() {
     let contador = 0;
-
     return function () {
         contador++;
         return contador;

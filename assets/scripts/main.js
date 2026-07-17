@@ -5,17 +5,11 @@ import {
 } from "./motor.js";
 
 const melhorVagaElemento = document.getElementById("melhor-vaga");
-
 const listaVagasElemento = document.getElementById("lista-vagas");
-
 const formulario = document.getElementById("form-candidato");
-
 const campoNome = document.getElementById("nome");
-
 const campoExperiencia = document.getElementById("experiencia");
-
 const campoArea = document.getElementById("area");
-
 const campoHabilidades = document.querySelectorAll(
     'input[name="habilidades"]'
 );
@@ -201,26 +195,25 @@ async function mostrarRanking(candidato) {
 
 formulario.addEventListener("submit", (event) => {
 
+    console.log("EVENTO SUBMIT EXECUTADO");
     event.preventDefault();
 
     const habilidades = [];
-
     campoHabilidades.forEach((habilidade) => {
-
         if (habilidade.checked) {
             habilidades.push(habilidade.value);
         }
-
     });
 
     if (
         campoNome.value.trim() === "" ||
         campoExperiencia.value.trim() === "" ||
+        Number(campoExperiencia.value) < 0 ||
         campoArea.value === "" ||
         habilidades.length === 0
     ) {
         alert(
-            "Preencha todos os campos e selecione pelo menos uma habilidade."
+            "Preencha todos os campos corretamente e selecione pelo menos uma habilidade."
         );
         return;
     }
