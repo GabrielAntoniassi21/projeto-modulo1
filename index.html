@@ -1,15 +1,11 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!-- SEO -->
     <title>SkillMatch Web | Compatibilidade com Vagas Front-End</title>
     <meta name="description"
         content="Aplicação web para analisar a compatibilidade entre candidatos e vagas de Front-End Júnior.">
-
     <link rel="stylesheet" href="./assets/styles/styles.index.css">
 </head>
 
@@ -21,38 +17,30 @@
            alt="Logo do SkillMatch Web">
 
         <div>
-
             <h1>SkillMatch Web</h1>
-
             <p>
                 Descubra sua compatibilidade com vagas Front-End.
             </p>
-
         </div>
     </header>
 
     <main>
-
         <section>
-
             <h2>Informe seu perfil</h2>
-
             <form id="form-candidato">
-
                 <label for="nome">Nome</label>
                 <input 
                 type="text"
                 id="nome"
                 name="nome"
                 placeholder="Digite seu nome...">
-
                 <label for="experiencia">Experiência (meses)</label>
                 <input
-                type="number"
-                id="experiencia"
-                name="experiencia"
-                placeholder="Ex: 12">   
-
+                    type="number"
+                    id="experiencia"
+                    name="experiencia"
+                    min="0"
+                    placeholder="Ex: 12">   
                 <label for="area">Área</label>
                     <select id="area" name="area">
                     <option value="">Selecione uma área</option>
@@ -60,115 +48,94 @@
                     <option value="Back-End">Back-End</option>
                     <option value="Full Stack">Full Stack</option>
                 </select>
-
                 <fieldset>
-
                     <legend>Habilidades</legend>
-
                     <input
+                        class="habilidade"
                         type="checkbox"
                         id="html"
                         name="habilidades"
                         value="HTML">
-
                     <label for="html">HTML</label>
-
                     <input
+                        class="habilidade"
                         type="checkbox"
                         id="css"
                         name="habilidades"
                         value="CSS">
                     <label for="css">CSS</label>
-
                     <input
+                        class="habilidade"
                         type="checkbox"
                         id="javascript"
                         name="habilidades"
                         value="JavaScript">
                     <label for="javascript">JavaScript</label>
-
                     <input
+                        class="habilidade"
                         type="checkbox"
                         id="git"
                         name="habilidades"
                         value="Git">
                         <label for="git">Git</label>
-
                     <input
+                        class="habilidade"
                         type="checkbox"
                         id="github"
                         name="habilidades"
                         value="GitHub">
                     <label for="github">GitHub</label>
-
                     <input
+                        class="habilidade"
                         type="checkbox"
                         id="kanban"
                         name="habilidades"
                         value="Kanban">
                     <label for="kanban">Kanban</label>
-
                     <input
+                        class="habilidade"
                         type="checkbox"
                         id="logica-programacao"
                         name="habilidades"
                         value="Lógica de Programação">
                     <label for="logica-programacao">Lógica de Programação</label>
-
                     <input
+                        class="habilidade"
                         type="checkbox"
                         id="arrays"
                         name="habilidades"
                         value="Arrays">
                     <label for="arrays">Arrays</label>
-
                     <input
+                        class="habilidade"
                         type="checkbox"
                         id="objetos"
                         name="habilidades"
                         value="Objetos">
                     <label for="objetos">Objetos</label>
-
                     <input
+                        class="habilidade"
                         type="checkbox"
                         id="funcoes"
                         name="habilidades"
                         value="Funções">
                     <label for="funcoes">Funções</label>
-
                 </fieldset>
-
                 <button type="submit" id="btn-analisar">
                     Analisar Compatibilidade
                 </button>
-
             </form>
-
         </section>
-
         <section>
-
             <h2>Resultado da Compatibilidade</h2>
-
             <div id="melhor-vaga">
-
             </div>
-
             <div id="lista-vagas">
-
             </div>
-
         </section>
-
-
     </main>
-
     <footer>
-
     </footer>
-
     <script type="module" src="./assets/scripts/main.js"></script>
-
 </body>
-
 </html>
